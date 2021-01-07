@@ -1,0 +1,36 @@
+body, html {
+  width: 100%; height: 100%;
+}
+body {
+  -webkit-text-size-adjust: none;
+  position: relative;
+  margin: 0px;
+  font-size: 14px;
+  font-family: 'apple-medium';
+  font-weight: 400;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+}
+ol, ul, li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+button {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  outline: none;
+}
+p {
+  margin: 0px;
+  padding: 0px;
+}
+img {
+  vertical-align: top;
+}
