@@ -8,7 +8,7 @@ $(document).ready(function () {
 });
 
 function fabAction () {
-  $('.menu-btn').click(function (){
+  $('.menu-btn, .menu-dim').click(function (){
     $('.menu-view, .menu-btn, body').toggleClass('active');
   });
 }
