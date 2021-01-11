@@ -18,6 +18,7 @@ header {
   width: calc(100% - 60px);
   margin: 30px;
   justify-content: space-between;
+  animation: 2s TopBottomAnimation;
   .logo {
     width: 40px;
     height: 40px;
@@ -27,6 +28,19 @@ header {
     line-height: 40px;
     font-size: 16px;
     font-weight: bold;
+  }
+  .fixed-info {
+    position: fixed;
+    top: 100px;
+    right: 45px;
+    width: 10px;
+    text-align: center;
+    color: #666;
+    li {
+      transform: rotate(360deg);
+      animation: textRotate 5s 1s infinite;
+      animation-fill-mode: forwards;
+    }
   }
 }
 .work-wrap {
@@ -248,9 +262,8 @@ header {
           right: 0px;
           width: 47px;
           height: 47px;
-          color: #ff0000;
           border-radius: 100%;
-          background: #ff0000;
+          background: #6C63FF;
           animation: 1.5s dotAnimation forwards; // forwards 마지막 유지
           animation-delay: 1s;
           transition: 1s cubic-bezier(0.32, 0.18, 0.26, 0.84);
@@ -268,7 +281,7 @@ header {
           width: 500px;
           height: 150px;
           border-radius: 100px;
-          background: RGB(255, 0, 0, 0.8);
+          background: RGB(108, 99, 255, 0.8);
           box-shadow: 1px 1px 1px 0px #151414;
           transition: 1s ease-in-out;
           animation: 0.5s TopBottomAnimation forwards;
@@ -293,6 +306,7 @@ header {
     .info-contents {
       width: 550px;
       font-size: 30px;
+      text-align: center;
     }
     .fade-contents {
       line-height: 1.5;
@@ -472,7 +486,7 @@ header {
 	-webkit-transform: scale3d(1, 1, 1);
 	transform: scale3d(1, 1, 1);
 }
-.marquee {
+.marquee-left {
   width: 100%;
   font-size: 30px;
   padding-left: 120%;
@@ -480,7 +494,20 @@ header {
   white-space: nowrap;
   animation-duration: 10s;
   animation-delay: 0.5s;
-  -webkit-animation-name: marquee;
+  -webkit-animation-name: marqueeLeft;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both
+}
+.marquee-right {
+  width: 100%;
+  font-size: 30px;
+  padding-left: 120%;
+  display: inline-block;
+  white-space: nowrap;
+  animation-duration: 10s;
+  animation-delay: 0.5s;
+  -webkit-animation-name: marqueeRight;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-fill-mode: both
