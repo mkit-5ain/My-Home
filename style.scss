@@ -254,33 +254,6 @@
     transform: rotate(360deg);
   }
 }
-
-// @keyframes symbol-animation-01 {
-//   0% {-webkit-transform: translate(0,0);transform: translate(0,0)}
-//   25% {-webkit-transform: translate(0,328px);transform: translate(0,328px) }
-//   50% {-webkit-transform: translate(-328px,328px);transform: translate(-328px,328px)}
-//   75% {-webkit-transform: translate(0,228px);transform: translate(0,328px)}
-//   100% {-webkit-transform: translate(0,0);transform: translate(0,0)}
-// }
-// @keyframes symbol-animation-02 {
-//   0% {-webkit-transform: translate(0,0);transform: translate(0,0)}
-//   25% {-webkit-transform: translate(0,-328px);transform: translate(0,-328px)}
-//   75% {-webkit-transform: translate(0,-328px);transform: translate(0,-328px)}
-//   100% {-webkit-transform: translate(0,0);transform: translate(0,0)}
-// }
-// @keyframes symbol-animation-03 {
-//   25% {-webkit-transform: translate(0,328px);transform: translate(0,328px)}
-//   50% {-webkit-transform: translate(328px,328px);transform: translate(328px,328px)}
-//   75% {-webkit-transform: translate(0,0);transform: translate(0,0)}
-//   100% {-webkit-transform: translate(0,0);transform: translate(0,0)}
-// }
-// @keyframes symbol-animation-04 {
-//   25% {-webkit-transform: translate(0,-328px);transform: translate(0,-328px)}
-//   50% {-webkit-transform: translate(328px,-328px);transform: translate(328px,-328px)}
-//   75% {-webkit-transform: translate(0px, 0px);transform: translate(0px,0px)}
-//   100% {-webkit-transform: translate(0,0);transform: translate(0,0)}
-// }
-
 /*
   style
  */
@@ -311,7 +284,7 @@
 }
 .work-wrap {
   .background-animate {
-    background: linear-gradient(90deg, rgba(77, 160, 160, 0.5), rgba(85, 121, 202, 0.5));
+    background: linear-gradient(90deg, rgba(255, 128, 128, 0.5), rgba(232, 74, 104, 0.5));
   }
 }
 .background-circle-wrap {
@@ -619,5 +592,100 @@ body {
     top: 199px;
     right: 505px;
     width: 83px;
+  }
+}
+/* symbol animation */
+.symbol-animation {
+  &.type-a {
+    position: absolute;
+    top: 100px;
+    right: 300px;
+    .symbol-wrap {
+      position: relative;
+      & > div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+      }
+      .symbol-01 {
+        top: 0px;
+        right: 0px;
+        background: #6C63FF;
+        animation: symbol-animation-a01 3.5s infinite
+      }
+      .symbol-02 {
+        top: 120px;
+        right: 0px;
+        background: #000;
+        animation: symbol-animation-a02 3.5s infinite
+      }
+      .symbol-03 {
+        top: 120px;
+        right: 120px;
+        background: #000;
+        animation: symbol-animation-a03 3.5s infinite
+      }
+    }
+    @keyframes symbol-animation-a01 {
+      25% {-webkit-transform: translate(0,120px);transform: translate(0,120px) }
+      50% {-webkit-transform: translate(-120px,120px);transform: translate(-120px,120px)}
+      75% {-webkit-transform: translate(0,120px);transform: translate(0,120px)}
+    }
+    @keyframes symbol-animation-a02 {
+      25% {-webkit-transform: translate(0,-120px);transform: translate(0,-120px)}
+      75% {-webkit-transform: translate(0,-120px);transform: translate(0,-120px)}
+    }
+    @keyframes symbol-animation-a03 {
+      25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+      50% {-webkit-transform: translate(120px,0px);transform: translate(120px,0px)}
+      75% {-webkit-transform: translate(0,0);transform: translate(0,0)}
+    }
+  }
+  &.type-b {
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    .symbol-wrap {
+      position: relative;
+      & > div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+      }
+      .symbol-01 {
+        top: 0px;
+        left: 0px;
+        background: #FF8080;
+        animation: symbol-animation-b01 3.5s infinite
+      }
+      .symbol-02 {
+        top: 120px;
+        left: 0px;
+        background: #000;
+        animation: symbol-animation-b02 3.5s infinite
+      }
+      .symbol-03 {
+        top: 120px;
+        left: 120px;
+        background: #000;
+        animation: symbol-animation-b03 3.5s infinite
+      }
+    }
+    @keyframes symbol-animation-b01 {
+      25% {-webkit-transform: translate(0,120px);transform: translate(0,120px) }
+      50% {-webkit-transform: translate(120px,120px);transform: translate(120px,120px)}
+      75% {-webkit-transform: translate(0,120px);transform: translate(0,120px)}
+    }
+    @keyframes symbol-animation-b02 {
+      25% {-webkit-transform: translate(0,-120px);transform: translate(0,-120px)}
+      75% {-webkit-transform: translate(0,-120px);transform: translate(0,-120px)}
+    }
+    @keyframes symbol-animation-b03 {
+      25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+      50% {-webkit-transform: translate(-120px,0px);transform: translate(-120px,0px)}
+      75% {-webkit-transform: translate(0,0);transform: translate(0,0)}
+    }
   }
 }
