@@ -109,12 +109,10 @@ header {
   }
   .work-list {
     display: flex;
-    width: 1300px;
-    margin: 0px auto;
+    transform: translate(0px, 0px);
     flex-wrap: wrap;
-    transform: translate(150px, 0px);
-    animation: layoutMove 1s forwards;
-    // animation-delay: 0.5s;
+    justify-content: center;
+    animation: experienceMove 2s forwards;
     opacity: 0;
     .list-item {
       position: relative;
@@ -269,7 +267,7 @@ header {
           width: 47px;
           height: 47px;
           border-radius: 100%;
-          background: #6C63FF;
+          background: $primary-color;
           animation: 1.5s dotAnimation forwards; // forwards 마지막 유지
           animation-delay: 1s;
           transition: 1s cubic-bezier(0.32, 0.18, 0.26, 0.84);
@@ -317,12 +315,21 @@ header {
     .fade-contents {
       line-height: 1.5;
       transform: translate(0px, 50px);
-      transition: 0.5s ease-in-out;
-      &:first-child {
-        transform: translate(-50px, 0px);
-      }
       &.active {
+        animation: fade-contents 2s forwards;
+      }
+    }
+    @keyframes fade-contents {
+      from {
+        transform: translate(0px, 50px);
+        opacity: 0;
+      }
+      50% {
+        transform: translate(0px, -10px);
+      }
+      to {
         transform: translate(0px, 0px);
+        opacity: 1;
       }
     }
   }
@@ -402,7 +409,7 @@ header {
   font-size: 22px;
   span {
     position: relative;
-    color: #FF8080;
+    color: $secondary-color;
     &::after {
       content: '';
       position: absolute;
@@ -410,7 +417,7 @@ header {
       left: 5px;
       width: 67px;
       height: 15px;
-      background: #FF8080;
+      background: $secondary-color;
       opacity: 0.2;
     }
   }
@@ -427,6 +434,14 @@ header {
       &:hover {
         display: none;
       }
+    }
+  }
+}
+.experience-btn {
+  &.fade-contents {
+    transform: translate(0px, 50px);
+    &.active {
+      animation: fade-contents 2s forwards;
     }
   }
 }
@@ -457,11 +472,12 @@ header {
     }
   }
   .contact-introduction {
-    padding: 400px 50px;
     .contents {
-      padding-top: 50px;
+      width: 100vw;
+      height: 100vh;
       font-size: 150px;
       font-family: 'sarabun-regular';
+      text-align: center;
       transform: translate(0px, -50%);
       opacity: 0;
       transition: 1s ease-in-out;
@@ -628,7 +644,7 @@ header {
   width: 40px;
   height: 40px;
   border: 2px solid #000;
-  background: #fff;
+  background: transparent;
   cursor: pointer;
   transition: 0.1s ease-in-out;
   &:hover {
@@ -733,7 +749,7 @@ header {
             width: 30px;
             height: 30px;
             display: block;
-            background: linear-gradient(45deg, #6C63FF, #6C63FF00);
+            background: linear-gradient(45deg, $primary-color, #6C63FF00);
             border-radius: 15px;
           }
         }

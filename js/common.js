@@ -1,13 +1,13 @@
 $(document).ready(function () {
-  fabAction();
+  menuAction();
   layoutTab();
   contentsFade();
   themeAction();
-  scrollContents();
+  // scrollContents();
   fadeInUp();
 });
 
-function fabAction () {
+function menuAction () {
   $('.menu-btn, .menu-dim').click(function (){
     $('.menu-view, .menu-btn, body').toggleClass('active');
   });
@@ -40,14 +40,14 @@ function contentsFade () {
   });
 }
 
-function scrollContents () {
-    $(window).scroll (function () {
-        var Value = ($(window).scrollTop() / 25 );
-        $('.border-circle-wrap').css(
-          { 'transform' : 'translateY(' + Value + 'px)' }
-        );
-    });
-}
+// function scrollContents () {
+//     $(window).scroll (function () {
+//         var Value = ($(window).scrollTop() / 25 );
+//         $('.border-circle-wrap').css(
+//           { 'transform' : 'translateY(' + Value + 'px)' }
+//         );
+//     });
+// }
 
 function fadeInUp () {
   $(window).scroll(function () {
