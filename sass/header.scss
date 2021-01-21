@@ -1,0 +1,33 @@
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  display: flex;
+  width: calc(100% - 60px);
+  margin: 30px;
+  justify-content: space-between;
+  .logo {
+    width: 40px;
+    height: 40px;
+    transition: 0.1s ease-in-out;
+  }
+  .page-title {
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .fixed-info {
+    position: fixed;
+    top: 100px;
+    right: 45px;
+    z-index: 10;
+    width: 10px;
+    text-align: center;
+    li {
+      transform: rotate(360deg);
+      animation: textRotate 5s 1s infinite;
+      animation-fill-mode: forwards;
+    }
+  }
+}

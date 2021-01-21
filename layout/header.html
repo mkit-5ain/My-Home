@@ -1,0 +1,44 @@
+<a href="index.html"><img class="logo" src="image/logo.svg" alt="로고"></a>
+<div class="page-title">Index</div>
+<button class="menu-btn">
+  <div></div>
+  <div></div>
+</button>
+<div class="menu-view">
+  <div class="menu-dim"></div>
+  <div class="menu-view-menubox">
+    <ul class="menubox-list">
+      <li class="list index"><a href="index.html">Index</a></li>
+      <li class="list exp"><a href="experience.html">Experience</a></li>
+      <li class="list cont"><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="menu-theme">
+    <div class="theme-list">
+      <span class="theme-type">
+        <span class="light">Light</span>
+        <span class="dark">Dark</span>
+      </span>&nbsp;Mode
+    </div>
+    <div class="theme-list-icon">
+      <div class="theme-light"></div>
+      <div class="theme-dark"></div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function () {
+    menuAction();
+    themeAction();
+  });
+  function menuAction () {
+    $('.menu-btn, .menu-dim').click(function (){
+      $('.menu-view, .menu-btn, body').toggleClass('active');
+    });
+  }
+  function themeAction () {
+    $('.menu-theme').click(function (){
+      $('body, .theme-list').toggleClass('theme-dark');
+    });
+  }
+</script>

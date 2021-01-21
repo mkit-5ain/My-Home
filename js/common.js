@@ -1,23 +1,49 @@
 $(document).ready(function () {
-  menuAction();
+  layout();
   layoutTab();
   contentsFade();
-  themeAction();
+  // themeAction();
   // scrollContents();
   fadeInUp();
+  exp();
 });
 
-function menuAction () {
-  $('.menu-btn, .menu-dim').click(function (){
-    $('.menu-view, .menu-btn, body').toggleClass('active');
+function layout () {
+  $(document).ready(function () {
+    $.ajax({
+      type: 'get' ,
+      url: 'layout/header.html' ,
+      dataType : 'html' ,
+      success: function(data) {
+        $("#header").html(data);
+      }
+    });
+  });
+
+  $(document).ready(function () {
+    $.ajax({
+      type: 'get' ,
+      url: 'layout/index.html' ,
+      dataType : 'html' ,
+      success: function(data) {
+        $("#index").html(data);
+      }
+    });
+  });
+}
+function exp () {
+  $('#exp').click(function () {
+    $.ajax({
+      type: 'get' ,
+      url: 'layout/experience.html' ,
+      dataType : 'html' ,
+      success: function(data) {
+        $("#experience").html(data);
+      }
+    });
   });
 }
 
-function themeAction () {
-  $('.menu-theme').click(function (){
-    $('body, .theme-list').toggleClass('theme-dark');
-  });
-}
 function layoutTab () {
   $(".category ul li").click(function(){
       var activeTab = $(this).attr('data-tab');

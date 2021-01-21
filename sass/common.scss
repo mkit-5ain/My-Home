@@ -9,39 +9,6 @@
   background: url('image/scroll_down.svg') center bottom no-repeat;
   animation: topBottomAnimate 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate
 }
-header {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 10;
-  display: flex;
-  width: calc(100% - 60px);
-  margin: 30px;
-  justify-content: space-between;
-  .logo {
-    width: 40px;
-    height: 40px;
-    transition: 0.1s ease-in-out;
-  }
-  .page-title {
-    line-height: 40px;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .fixed-info {
-    position: fixed;
-    top: 100px;
-    right: 45px;
-    z-index: 10;
-    width: 10px;
-    text-align: center;
-    li {
-      transform: rotate(360deg);
-      animation: textRotate 5s 1s infinite;
-      animation-fill-mode: forwards;
-    }
-  }
-}
 .work-wrap {
   position: relative;
   width: 100%;
@@ -393,47 +360,6 @@ header {
       background: url('image/daily.svg') 0px 0px no-repeat;
       background-size: 300px;
       opacity: 0.7;
-    }
-  }
-}
-.experience-more {
-  position: relative;
-  display: block;
-  width: 650px;
-  height: 100px;
-  line-height: 104px;
-  margin: 200px auto 400px auto;
-  border-radius: 50px;
-  box-shadow: 20px 20px 40px #d9d9d9, -20px -20px 40px #fff;
-  font-weight: bold;
-  font-size: 22px;
-  span {
-    position: relative;
-    color: $secondary-color;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 12px;
-      left: 5px;
-      width: 67px;
-      height: 15px;
-      background: $secondary-color;
-      opacity: 0.2;
-    }
-  }
-  .title {
-    padding-left: 80px;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 43px;
-      right: 60px;
-      width: 46px;
-      height: 12px;
-      background: url('image/icon-arrow-right.png') 0px 0px no-repeat;
-      &:hover {
-        display: none;
-      }
     }
   }
 }
