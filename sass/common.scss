@@ -350,6 +350,14 @@
       }
     }
   }
+  .personal-info {
+    font-size: 4vw;
+    text-align: center;
+    > p {
+      padding: 4vw 0;
+      font-size: 2vw;
+    }
+  }
 }
 
 .menu--valentine {
