@@ -1,62 +1,236 @@
-@media screen and (max-width: 1616px)  {
-  .main-wrap {
-    .work-list {
-      width: 1040px;
+@media screen and ( max-width: 750px ) {
+  /*---------------- 상단 ----------------*/
+  #header {
+    width: calc(100% - 10vw);
+    margin: 5vw;
+    .logo {
+      width: 30px;
+      height: 30px;
     }
-  }
-}
-
-@media screen and (max-width: 1356px)  {
-  .main-wrap {
-    .work-list {
-      width: 780px;
+    .page-title {
+      font-size: 14px;
+      line-height: 30px;
     }
-  }
-}
-
-@media screen and (max-width: 1096px)  {
-  .main-wrap {
-    .work-list {
-      width: 520px;
-    }
-  }
-}
-
-@media screen and (max-width: 836px)  {
-  .main-wrap {
-    .work-list {
-      width: 520px;
-      &.move {
-        transform: translate3d(00px, 0px, 0px)
+    .menu-btn {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #000;
+      div {
+        height: 1px;
+        &:nth-child(1) {
+          top: 9px;
+          left: calc(50% - 7px);
+          width: 14px;
+        }
+        &:nth-child(2) {
+          top: 19px;
+          left: calc(50% - 7px);
+          width: 14px;
+        }
       }
     }
-    .category-list {
-      display: none;
-    }
-    .fab-list {
-      display: block;
+    .menu-view {
+      /* 메뉴 리스트 */
+      .menu-view-menubox {
+        .menubox-list {
+          .list {
+            a {
+              font-size: 15vw;
+              &::after {
+                width: 5vw;
+                height: 5vw;
+              }
+            }
+          }
+        }
+      }
+      /* 모드 선택*/
+      .menu-theme {
+        padding: 0px;
+      }
     }
   }
-}
-@media screen and ( max-width: 768px ) {
-  .main-wrap {
-    .work-list {
-      display: grid;
-      width: auto;
-      margin: 7px 1em;
-      flex-wrap: wrap;
-      grid-template-columns: repeat(2,1fr);
-      .list-item {
-        width: auto;
+  /*// ---------------- 상단 ----------------*/
+  /*---------------- 메인페이지 ----------------*/
+  .intro-wrap {
+    .prologue-wrap {
+      .prologue {
         height: auto;
-        border: 7px solid #fff;
-        &:nth-child(odd) {
-          border-left: 0px;
+        line-height: 20vw;
+        font-size: 20vw;
+        &.effect-dot {
+          width: 68vw;
+          .inner-dot {
+            width: 5vw;
+            height: 5vw;
+          }
         }
-        &:nth-child(even) {
-          border-right: 0px;
+        &.effect-line {
+          &::after {
+            bottom: -10vw;
+            left: 60px;
+            width: 65vw;
+            height: 16vw;
+          }
         }
       }
     }
   }
+  .info-wrap {
+    width: auto;
+    margin: 0px;
+    .inner-wrap {
+      flex-direction: column;
+      padding: 100px 15px;
+      .calendar {
+        &::before {
+          bottom: 25px;
+          right: 50px;
+          width: 100px;
+          height: 80px;
+          background-size: 100px;
+        }
+      }
+      .last-year {
+        &::before {
+          top: -120px;
+          left: 100px;
+          width: 150px;
+          height: 95px;
+          background-size: 150px;
+        }
+      }
+      .daily {
+        &::before {
+          bottom: -130px;
+          right: 0px;
+          width: 150px;
+          height: 120px;
+          background-size: 150px;
+        }
+      }
+      .this-year::before {
+        top: -120px;
+        left: auto;
+        width: 150px;
+        height: 110px;
+        background-size: 150px;
+      }
+      .info-contents {
+        width: auto;
+        margin: 100px 0px;
+        font-size: 5.5vw;
+      }
+    }
+  }
+  .experience-btn {
+    .experience-more {
+      width: calc(100% - 30px);
+      height: 100px;
+      line-height: normal;
+      font-size: 20px;
+      text-align: center;
+      .title {
+        padding: 24px 0px;
+        &::after {
+          // top: 58px;
+          right: 20px;
+          width: 30px;
+          height: 8px;
+          background-size: 30px;
+        }
+      }
+    }
+  }
+  .badge {
+    width: 110px;
+    height: 55px;
+    margin: 200px auto 0px auto;
+    .circle {
+      width: 10px;
+      height: 10px;
+      top: calc(50% - 5px);
+      left: calc(50% - 5px);
+    }
+  }
+  /*// ---------------- 메인페이지 ----------------*/
+  /*---------------- experience ----------------*/
+  .work-wrap {
+    .category-contents {
+      height: auto;
+      padding: 100px 0px;
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  /*// ---------------- experience ----------------*/
+  /*---------------- style ----------------*/
+  .symbol-animation {
+    &.type-a {
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      .symbol-wrap {
+        & > div {
+          width: 50px;
+          height: 50px;
+        }
+        .symbol-02 {
+          top: 60px;
+        }
+        .symbol-03 {
+          top: 60px;
+          right: 60px;
+        }
+      }
+    }
+    &.type-b {
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      .symbol-wrap {
+        & > div {
+          width: 50px;
+          height: 50px;
+        }
+        .symbol-02 {
+          top: 60px;
+        }
+        .symbol-03 {
+          top: 60px;
+          left: 60px;
+        }
+      }
+    }
+  }
+  @keyframes symbol-animation-a01 {
+    25% {-webkit-transform: translate(0,60px);transform: translate(0,60px) }
+    50% {-webkit-transform: translate(-60px,60px);transform: translate(-60px,60px)}
+    75% {-webkit-transform: translate(0,60px);transform: translate(0,60px)}
+  }
+  @keyframes symbol-animation-a02 {
+    25% {-webkit-transform: translate(0,-60px);transform: translate(0,-60px)}
+    75% {-webkit-transform: translate(0,-60px);transform: translate(0,-60px)}
+  }
+  @keyframes symbol-animation-a03 {
+    25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+    50% {-webkit-transform: translate(60px,0px);transform: translate(60px,0px)}
+    75% {-webkit-transform: translate(0,0);transform: translate(0,0)}
+  }
+
+  @keyframes symbol-animation-b01 {
+    25% {-webkit-transform: translate(0,60px);transform: translate(0,60px) }
+    50% {-webkit-transform: translate(60px,60px);transform: translate(60px,60px)}
+    75% {-webkit-transform: translate(0,60px);transform: translate(0,60px)}
+  }
+  @keyframes symbol-animation-b02 {
+    25% {-webkit-transform: translate(0,-60px);transform: translate(0,-60px)}
+    75% {-webkit-transform: translate(0,-60px);transform: translate(0,-60px)}
+  }
+  @keyframes symbol-animation-b03 {
+    25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+    50% {-webkit-transform: translate(-60px,0px);transform: translate(-60px,0px)}
+    75% {-webkit-transform: translate(0,0);transform: translate(0,0)}
+  }
+  /*// ---------------- style ----------------*/
 }
