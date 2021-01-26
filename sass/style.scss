@@ -390,6 +390,32 @@
     transition: 0.5s ease-in-out;
   }
 }
+.marquee-left {
+  width: 100%;
+  font-size: 30px;
+  padding-left: 120%;
+  display: inline-block;
+  white-space: nowrap;
+  animation-duration: 12s;
+  animation-delay: 0.5s;
+  -webkit-animation-name: marqueeLeft;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both
+}
+.marquee-right {
+  width: 100%;
+  font-size: 30px;
+  padding-left: 120%;
+  display: inline-block;
+  white-space: nowrap;
+  animation-duration: 14s;
+  animation-delay: 1.5s;
+  -webkit-animation-name: marqueeLeft;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both
+}
 /* 메뉴 */
 .menu_widget {
   display:none;
@@ -649,8 +675,8 @@ body {
   }
   &.type-b {
     position: absolute;
-    bottom: 250px;
-    left: 200px;
+    bottom: 100px;
+    left: 100px;
     width: 220px;
     height: 220px;
     .symbol-wrap {
@@ -866,7 +892,6 @@ body {
     }
   }
   &.type-e {
-    margin-top: 2000px;
     width: 220px;
     height: 220px;
     .symbol-wrap {
@@ -881,31 +906,76 @@ body {
         top: 0px;
         left: 0px;
         background: #000;
-        animation: symbol-animation-a01 3.5s infinite
+        animation: symbol-animation-e01 2.5s infinite
       }
       .symbol-02 {
         top: 0px;
         left: 120px;
-        background: $primary-color;
-        animation: symbol-animation-a02 3.5s infinite
+        background: #FF8080;
+        animation: symbol-animation-e02 2.5s infinite
       }
       .symbol-03 {
         top: 0px;
         left: 240px;
         background: #000;
-        animation: symbol-animation-a03 3.5s infinite
+        animation: symbol-animation-e03 2.5s infinite
       }
     }
-    @keyframes symbol-animation-a01 {
+    @keyframes symbol-animation-e01 {
       25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px) }
       50% {-webkit-transform: translate(120px,0px);transform: translate(120px,0px)}
       75% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
     }
-    @keyframes symbol-animation-a02 {
+    @keyframes symbol-animation-e02 {
       25% {-webkit-transform: translate(0px,-120px);transform: translate(0px,-120px)}
       75% {-webkit-transform: translate(0px,-120px);transform: translate(0px,-120px)}
     }
-    @keyframes symbol-animation-a03 {
+    @keyframes symbol-animation-e03 {
+      25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+      50% {-webkit-transform: translate(-120px,0px);transform: translate(-120px,0px)}
+      75% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+    }
+  }
+  &.type-f {
+    width: 220px;
+    height: 220px;
+    .symbol-wrap {
+      position: relative;
+      & > div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+      }
+      .symbol-01 {
+        top: 0px;
+        left: 0px;
+        background: #000;
+        // animation: symbol-animation-f01 1s infinite
+      }
+      .symbol-02 {
+        top: 0px;
+        left: 120px;
+        background: #FF8080;
+        // animation: symbol-animation-f02 1s infinite
+      }
+      .symbol-03 {
+        top: 0px;
+        left: 240px;
+        background: #000;
+        // animation: symbol-animation-f03 1s infinite
+      }
+    }
+    @keyframes symbol-animation-f01 {
+      25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px) }
+      50% {-webkit-transform: translate(120px,0px);transform: translate(120px,0px)}
+      75% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+    }
+    @keyframes symbol-animation-f02 {
+      25% {-webkit-transform: translate(0px,-120px);transform: translate(0px,-120px)}
+      75% {-webkit-transform: translate(0px,-120px);transform: translate(0px,-120px)}
+    }
+    @keyframes symbol-animation-f03 {
       25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
       50% {-webkit-transform: translate(-120px,0px);transform: translate(-120px,0px)}
       75% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
