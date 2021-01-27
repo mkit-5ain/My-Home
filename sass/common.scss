@@ -254,7 +254,6 @@
     width: 400px;
     margin: 200px auto 200px auto;
     padding: 20px 0px;
-    font-weight: bold;
     font-size: 22px;
     text-align: center;
     border-radius: 50px;
@@ -321,7 +320,7 @@
       transition: 1s ease-in-out;
       &.active {
         transform: translate(0px, 0px);
-        animation: textEffect 1.75s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        animation: fade-contents 1.75s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         opacity: 1;
       }
       .initial {

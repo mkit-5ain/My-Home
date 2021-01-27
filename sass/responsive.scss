@@ -74,8 +74,8 @@
         &.effect-line {
           &::after {
             bottom: -10vw;
-            left: 60px;
-            width: 65vw;
+            left: 35vw;
+            width: 40vw;
             height: 16vw;
           }
         }
@@ -125,13 +125,13 @@
       .info-contents {
         width: auto;
         margin: 100px 0px;
-        font-size: 5.5vw;
+        font-size: 18px;
       }
     }
   }
   .experience-btn {
     .experience-more {
-      width: calc(100% - 30px);
+      width: calc(100% - 10vw);
       font-size: 20px;
       &::after {
         width: 30px;
@@ -194,6 +194,7 @@
       }
     }
     .personal-info {
+      width: calc(100% - 20vw);
       > p {
         font-size: 5vw;
         text-shadow: 1px 1px 1px #29292963;
@@ -221,6 +222,394 @@
   }
   /*// ---------------- contact ----------------*/
   /*---------------- style ----------------*/
+  .circle-wrap {
+    &.left-circle-wrap {
+      top: 10vw;
+      left: 10vw;
+      .circle {
+        width: 50px;
+        height: 50px;
+      }
+      &.active {
+        .circle {
+          width: 50px;
+          height: 50px;
+          @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+              transform: translate(0px, -30px * $i);
+              opacity: 0.15 * $i;
+            }
+          }
+        }
+      }
+    }
+    &.right-circle-wrap {
+      bottom: 100vw;
+      right: 0vw;
+      .circle {
+        width: 50px;
+        height: 50px;
+      }
+      &.active {
+        .circle {
+          width: 50px;
+          height: 50px;
+          @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+              transform: translate(0px, 25px * $i);
+              opacity: 0.15 * $i;
+            }
+          }
+        }
+      }
+    }
+  }
+  .symbol-animation {
+    &.type-a {
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      .symbol-wrap {
+        & > div {
+          width: 50px;
+          height: 50px;
+        }
+        .symbol-02 {
+          top: 60px;
+        }
+        .symbol-03 {
+          top: 60px;
+          right: 60px;
+        }
+      }
+    }
+    &.type-b {
+      left: 20px;
+      bottom: 400px;
+      width: 50px;
+      height: 50px;
+      .symbol-wrap {
+        & > div {
+          width: 50px;
+          height: 50px;
+        }
+        .symbol-02 {
+          top: 60px;
+        }
+        .symbol-03 {
+          top: 60px;
+          left: 60px;
+        }
+      }
+    }
+    &.type-e {
+      position: fixed;
+      bottom: 60px;
+      left: 10px;
+      width: auto;
+      height: auto;
+      .symbol-wrap {
+        & > div {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          border-radius: 100%;
+        }
+        .symbol-01 {
+          top: 0px;
+          left: 0px;
+          opacity: 0.5;
+        }
+        .symbol-02 {
+          top: 20px;
+          left: 0px;
+        }
+        .symbol-03 {
+          top: 40px;
+          left: 0px;
+          opacity: 0.5;
+        }
+      }
+    }
+    &.type-f {
+      position: fixed;
+      top: 100px;
+      right: 10vw;
+      width: auto;
+      height: auto;
+      .symbol-wrap {
+        & > div {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          border-radius: 100%;
+        }
+        .symbol-01 {
+          top: 13px;
+          left: 7px;
+          z-index: 2;
+          animation: symbol-animation-f01 3s infinite
+        }
+        .symbol-02 {
+          top: 20px;
+          left: 0px;
+          z-index: 1;
+        }
+        .symbol-03 {
+          top: 27px;
+          left: -7px;
+          z-index: 0;
+          animation: symbol-animation-f02 3s infinite
+        }
+      }
+    }
+  }
+  @keyframes symbol-animation-a01 {
+    25% {-webkit-transform: translate(0,60px);transform: translate(0,60px) }
+    50% {-webkit-transform: translate(-60px,60px);transform: translate(-60px,60px)}
+    75% {-webkit-transform: translate(0,60px);transform: translate(0,60px)}
+  }
+  @keyframes symbol-animation-a02 {
+    25% {-webkit-transform: translate(0,-60px);transform: translate(0,-60px)}
+    75% {-webkit-transform: translate(0,-60px);transform: translate(0,-60px)}
+  }
+  @keyframes symbol-animation-a03 {
+    25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+    50% {-webkit-transform: translate(60px,0px);transform: translate(60px,0px)}
+    75% {-webkit-transform: translate(0,0);transform: translate(0,0)}
+  }
+
+  @keyframes symbol-animation-b01 {
+    25% {-webkit-transform: translate(0,60px);transform: translate(0,60px) }
+    50% {-webkit-transform: translate(60px,60px);transform: translate(60px,60px)}
+    75% {-webkit-transform: translate(0,60px);transform: translate(0,60px)}
+  }
+  @keyframes symbol-animation-b02 {
+    25% {-webkit-transform: translate(0,-60px);transform: translate(0,-60px)}
+    75% {-webkit-transform: translate(0,-60px);transform: translate(0,-60px)}
+  }
+  @keyframes symbol-animation-b03 {
+    25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+    50% {-webkit-transform: translate(-60px,0px);transform: translate(-60px,0px)}
+    75% {-webkit-transform: translate(0,0);transform: translate(0,0)}
+  }
+  @keyframes symbol-animation-e01 {
+    25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px) }
+    50% {-webkit-transform: translate(0px,20px);transform: translate(0px,20px)}
+    75% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+  }
+  @keyframes symbol-animation-e02 {
+    25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+    50% {-webkit-transform: translate(20px,0px);transform: translate(20px,0px)}
+  }
+  @keyframes symbol-animation-e03 {
+    25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+    50% {-webkit-transform: translate(0px,-20px);transform: translate(0px,-20px)}
+    75% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+  }
+  @keyframes symbol-animation-f01 {
+    20% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px) }
+    40% {-webkit-transform: translate(-7px,7px);transform: translate(-7px,7px)}
+    60% {-webkit-transform: translate(-12px,0px);transform: translate(-12px,0px)}
+    80% {-webkit-transform: translate(-7px,7px);transform: translate(-7px,7px)}
+  }
+  @keyframes symbol-animation-f02 {
+    20% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px) }
+    40% {-webkit-transform: translate(7px,-7px);transform: translate(7px,-7px)}
+    60% {-webkit-transform: translate(12px,0px);transform: translate(12px,0px)}
+    80% {-webkit-transform: translate(7px,-7px);transform: translate(7px,-7px)}
+  }
+  /*// ---------------- style ----------------*/
+}
+
+@media screen and ( min-width: 751px ) and (max-width: 1536px) {
+  /*---------------- 메인페이지 ----------------*/
+  .intro-wrap {
+    .prologue-wrap {
+      .prologue {
+        height: auto;
+        line-height: 20vw;
+        font-size: 20vw;
+        &.effect-dot {
+          width: 68vw;
+          .inner-dot {
+            width: 5vw;
+            height: 5vw;
+          }
+        }
+        &.effect-line {
+          &::after {
+            bottom: -10vw;
+            left: 35vw;
+            width: 40vw;
+            height: 16vw;
+          }
+        }
+      }
+    }
+  }
+  .info-wrap {
+    width: auto;
+    margin: 0px;
+    .inner-wrap {
+      flex-direction: column;
+      padding: 100px 15px;
+      .calendar {
+        &::before {
+          bottom: 25px;
+          right: 50px;
+          width: 100px;
+          height: 80px;
+          background-size: 100px;
+        }
+      }
+      .last-year {
+        &::before {
+          top: -120px;
+          left: 100px;
+          width: 150px;
+          height: 95px;
+          background-size: 150px;
+        }
+      }
+      .daily {
+        &::before {
+          bottom: -130px;
+          right: 0px;
+          width: 150px;
+          height: 120px;
+          background-size: 150px;
+        }
+      }
+      .this-year::before {
+        top: -120px;
+        left: auto;
+        width: 150px;
+        height: 110px;
+        background-size: 150px;
+      }
+      .info-contents {
+        width: auto;
+        margin: 100px 0px;
+        font-size: 22px;
+      }
+    }
+  }
+  .experience-btn {
+    .experience-more {
+      width: calc(100% - 30vw);
+      font-size: 20px;
+      &::after {
+        width: 30px;
+        height: 8px;
+        background-size: 30px;
+      }
+    }
+  }
+  .badge {
+    width: 110px;
+    height: 55px;
+    margin: 200px auto 0px auto;
+    .circle {
+      width: 10px;
+      height: 10px;
+      top: calc(50% - 5px);
+      left: calc(50% - 5px);
+    }
+  }
+  .marquee-left {
+    width: 300%;
+  }
+  .marquee-right {
+    width: 300%;
+  }
+  /*// ---------------- 메인페이지 ----------------*/
+  /*---------------- experience ----------------*/
+  .work-wrap {
+    .category-contents {
+      height: auto;
+      padding: 100px 0px;
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  /*// ---------------- experience ----------------*/
+  /*---------------- contact ----------------*/
+  .contact-wrap {
+    padding: 20vw 0;
+    .text-wrap {
+      font-size: 15vw;
+      .text {
+        padding: 15vw 0;
+      }
+    }
+    .contact-introduction {
+      .contents {
+        padding: 20vw 0;
+        font-size: 15vw;
+        .initial {
+          &::before {
+            bottom: 4vw;
+          }
+        }
+        .initial-ass {
+          display: block;
+          // padding-top: 4vw;
+          font-size: 5vw;
+        }
+      }
+    }
+    .personal-info {
+      width: calc(100% - 20vw);
+      > p {
+        font-size: 5vw;
+        text-shadow: 1px 1px 1px #29292963;
+      }
+      &.active {
+        animation: fade-contents 2s forwards;
+      }
+    }
+  }
+  @keyframes textEffect {
+    0% {
+        font-size: 20vw;
+        color: #3eb5b5;
+        transform: translate(0px, -10vw);
+        opacity: 0;
+    }
+    50% {
+      color: #5579ca;
+    }
+    100% {
+        font-size: 15vw;
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+  }
+  /*// ---------------- contact ----------------*/
+  /*---------------- style ----------------*/
+  .circle-wrap {
+    &.left-circle-wrap {
+      top: 20vw;
+      left: 10vw;
+      .circle {
+        width: 75px;
+        height: 75px;
+      }
+      &.active {
+        .circle {
+          width: 75px;
+          height: 75px;
+          @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+              transform: translate(0px, 50px * $i);
+              opacity: 0.15 * $i;
+            }
+          }
+        }
+      }
+    }
+  }
   .symbol-animation {
     &.type-a {
       right: 20px;
