@@ -6,6 +6,7 @@ $(document).ready(function () {
   // scrollContents();
   fadeInUp();
   exp();
+  $('body').show();
 });
 
 function layout () {
