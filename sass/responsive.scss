@@ -158,6 +158,96 @@
     width: 300%;
   }
   /*// ---------------- 메인페이지 ----------------*/
+  /*---------------- project ----------------*/
+  .project {
+    .cover {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(#777, #fff);
+      .cover-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .contents-wrap {
+      margin: 0px 20px;
+      padding: 100px 0px;
+      .title {
+        display: inline;
+        position: relative;
+        font-size: 7vw;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 3vw;
+          left: 1.5vw;
+          width: 100%;
+          height: 4.5vw;
+          background: #ddd;
+          z-index: -1;
+        }
+      }
+      .discription {
+        padding-top: 10vw;
+        font-size: 4.5vw;
+        .interval {
+          padding-top: 4vw;
+        }
+        .btn-site-more {
+          padding-top: 8vw;
+          font-size: 4vw;
+          text-decoration: underline;
+        }
+      }
+      .skill {
+        font-size: 4vw;
+        padding-top: 20vw;
+        ul {
+          li {
+            padding: 3vw 0px;
+          }
+        }
+      }
+      .contents-detail {
+        .image {
+          img {
+            width: 80vw;
+          }
+        }
+        .image-title {
+          position: absolute;
+          top: 80vw;
+          left: -10px;
+          font-size: 20vw;
+          transform: rotate(270deg);
+          color: transparent;
+          -webkit-text-stroke: 1px #000;
+        }
+        .odd-contents {
+          position: relative;
+          margin-top: 30vw;
+          text-align: right;
+          .image-title {
+            transform-origin: top left;
+          }
+        }
+        .even-contents {
+          position: relative;
+          margin-top: 30vw;
+          .image-title {
+            left: auto;
+            right: -10px;
+            transform: rotate(90deg);
+            transform-origin: top right;
+          }
+        }
+      }
+    }
+  }
+  /*// ---------------- project ----------------*/
   /*---------------- experience ----------------*/
   .work-wrap {
     .category-contents {
