@@ -1,11 +1,9 @@
 $(document).ready(function () {
   layout();
-  layoutTab();
+  // layoutTab();
   contentsFade();
-  // themeAction();
   // scrollContents();
   fadeInUp();
-  exp();
   // $('body').show();
 });
 function layout () {
@@ -31,28 +29,16 @@ function layout () {
     });
   });
 }
-function exp () {
-  $('#exp').click(function () {
-    $.ajax({
-      type: 'get' ,
-      url: 'layout/experience.html' ,
-      dataType : 'html' ,
-      success: function(data) {
-        $("#experience").html(data);
-      }
-    });
-  });
-}
 
-function layoutTab () {
-  $(".category ul li").click(function(){
-      var activeTab = $(this).attr('data-tab');
-      $(".category ul li").removeClass('active');
-      $(".category-contents").removeClass('active');
-      $(this).addClass('active');
-      $("#" + activeTab).addClass('active');
-  });
-}
+// function layoutTab () {
+//   $(".category ul li").click(function(){
+//       var activeTab = $(this).attr('data-tab');
+//       $(".category ul li").removeClass('active');
+//       $(".category-contents").removeClass('active');
+//       $(this).addClass('active');
+//       $("#" + activeTab).addClass('active');
+//   });
+// }
 
 function contentsFade () {
   $(window).scroll(function () {

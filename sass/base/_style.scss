@@ -1,0 +1,411 @@
+@charset 'utf-8';
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+//// ----- Style 시작
+$primary-color: #6C63FF;
+$secondary-color: #4FBC9D;
+$default-color: #2b323f;
+/* 컨텐츠 페이드인 */
+.fade-contents { opacity: 0;
+  &.active { opacity: 1; }
+}
+// 메인 둥근 원
+.circle-wrap { position: absolute; z-index: -1; width: 100px; min-height: 100px; transition: 0.5s ease-in-out;
+  &.left-circle-wrap { top: 250px; left: -140px;
+    &.active {
+      .circle { transition: 0.5s ease-in-out;
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) { transform: translate(0px, -60px * $i); opacity: 0.15 * $i; }
+        }
+      }
+    }
+  }
+  &.right-circle-wrap { bottom: 550px; right: 400px;
+    &.active {
+      .circle { transition: 0.5s ease-in-out;
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) { transform: translate(-50px * $i, 50px * $i); opacity: 0.15 * $i; }
+        }
+      }
+    }
+  }
+  .circle {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    transform: translate(0px, 0px);
+    transition: 0.5s ease-in-out;
+  }
+}
+// 메인 텍스트 마퀴 시작
+.marquee-left {
+  width: 100%;
+  font-size: 30px;
+  padding-left: 120%;
+  display: inline-block;
+  white-space: nowrap;
+  animation-duration: 12s;
+  animation-delay: 0.5s;
+  -webkit-animation-name: marqueeLeft;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both
+}
+.marquee-right {
+  width: 100%;
+  font-size: 30px;
+  padding-left: 120%;
+  display: inline-block;
+  white-space: nowrap;
+  animation-duration: 14s;
+  animation-delay: 1.5s;
+  -webkit-animation-name: marqueeLeft;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both
+}
+// 메인 텍스트 마퀴 끝
+// 백그라운드 컬러 변경 시작
+.background-animate {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 71, 0, 0.5), rgba(245, 134, 201, 0.5));
+  animation: background 1s cubic-bezier(.445,.05,.55,.95) infinite alternate;
+  pointer-events: none;
+}
+// 백그라운드 컬러 변경 끝
+//// -----  Style 끝
+
+//// -----  animation 시작
+// 메인 텍스트
+@keyframes introTextAnimation {
+	from {
+		opacity: 0;
+		transform: translate(-500px, -100px);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-80px, 0px);
+	}
+}
+// 메인 텍스트 dot
+@keyframes dotAnimation {
+  10% {
+    transform: translate(1100px, 0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+// 메인 텍스트 박스 dot
+@keyframes TopBottomAnimation {
+  from {
+    opacity: 0; transition: 1s ease-in-out;
+  }
+  to {
+    opacity: 1; transition: 1s ease-in-out;
+  }
+}
+@keyframes projectDetailEffect {
+  from {
+    opacity: 0; transition: 1s ease-in-out; transform: scale(1.5);
+  }
+  to {
+    opacity: 1; transition: 1s ease-in-out; transform: scale(1);
+  }
+}
+
+// 컨텐츠 페이드인
+@keyframes fade-contents {
+	from {
+		transform: translate(0px, 50px); opacity: 0;
+	}
+	50% {
+		transform: translate(0px, -10px);
+	}
+	to {
+		transform: translate(0px, 0px); opacity: 1;
+	}
+}
+// 흐르는 텍스트 시작
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0px);
+  }
+  99%, to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-110%);
+  }
+  99%, to {
+    transform: translateX(0px);
+  }
+}
+// 흐르는 텍스트 끝
+// 도트 배지 시작
+@keyframes dotBadge {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+// 도트 배지 끝
+// 경험 페이지 레이아웃 노출 시작
+@keyframes experienceMove {
+  from {
+    transform: translate(0px, -150px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0px, 10px);
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+// 경험페이지 레이아웃 노출 끝
+// 경험페이지 도트 회선 시작
+.symbol-animation {
+  &.type-a { position: absolute; top: 100px; right: 300px; width: 220px; height: 220px;
+    .symbol-wrap { position: relative;
+      & > div {position: absolute;width: 100px;height: 100px;border-radius: 100%; }
+      .symbol-01 {top: 0px;right: 0px;background: $primary-color; animation: symbol-animation-a01 3.5s infinite }
+      .symbol-02 {top: 120px;right: 0px;background: #000;animation: symbol-animation-a02 3.5s infinite }
+      .symbol-03 {top: 120px;right: 120px;background: #000;animation: symbol-animation-a03 3.5s infinite }
+    }
+    @keyframes symbol-animation-a01 {
+      25% {-webkit-transform: translate(0,120px);transform: translate(0,120px) }
+      50% {-webkit-transform: translate(-120px,120px);transform: translate(-120px,120px)}
+      75% {-webkit-transform: translate(0,120px);transform: translate(0,120px)}
+    }
+    @keyframes symbol-animation-a02 {
+      25% {-webkit-transform: translate(0,-120px);transform: translate(0,-120px)}
+      75% {-webkit-transform: translate(0,-120px);transform: translate(0,-120px)}
+    }
+    @keyframes symbol-animation-a03 {
+      25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+      50% {-webkit-transform: translate(120px,0px);transform: translate(120px,0px)}
+      75% {-webkit-transform: translate(0,0);transform: translate(0,0)}
+    }
+  }
+  &.type-b { position: absolute; bottom: 100px; left: 100px; width: 220px; height: 220px;
+    .symbol-wrap { position: relative;
+      & > div { position: absolute; width: 100px; height: 100px; border-radius: 100%;
+      }
+      .symbol-01 { top: 0px; left: 0px; background: $secondary-color; animation: symbol-animation-b01 3.5s infinite }
+      .symbol-02 { top: 120px; left: 0px; background: #000; animation: symbol-animation-b02 3.5s infinite }
+      .symbol-03 { top: 120px; left: 120px; background: #000; animation: symbol-animation-b03 3.5s infinite }
+    }
+    @keyframes symbol-animation-b01 {
+      25% {-webkit-transform: translate(0,120px);transform: translate(0,120px) }
+      50% {-webkit-transform: translate(120px,120px);transform: translate(120px,120px)}
+      75% {-webkit-transform: translate(0,120px);transform: translate(0,120px)}
+    }
+    @keyframes symbol-animation-b02 {
+      25% {-webkit-transform: translate(0,-120px);transform: translate(0,-120px)}
+      75% {-webkit-transform: translate(0,-120px);transform: translate(0,-120px)}
+    }
+    @keyframes symbol-animation-b03 {
+      25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+      50% {-webkit-transform: translate(-120px,0px);transform: translate(-120px,0px)}
+      75% {-webkit-transform: translate(0,0);transform: translate(0,0)}
+    }
+  }
+  &.type-c {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    transform: translate(-50%, -50%);
+    animation: symbol-rotate 3.5s infinite;
+    opacity: 0;
+    .symbol-wrap { position: relative;
+      & > div { position: absolute; width: 100px; height: 100px; border-radius: 100%; }
+      .symbol-01 { top: 0px; left: 0px; background: $secondary-color; animation: symbol-animation-c01 5s infinite }
+      .symbol-02 { top: 0px; left: 150px; background: #000; animation: symbol-animation-c02 5s infinite }
+      .symbol-03 { top: 150px; left: 0px; background: #000; animation: symbol-animation-c03 5s infinite }
+      .symbol-04 { top: 150px; left: 150px; background: $secondary-color; animation: symbol-animation-c04 5s infinite }
+    }
+    @keyframes symbol-rotate {
+      from {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 0.1;
+      }
+      to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+        opacity: 0.1;
+      }
+    }
+    @keyframes symbol-animation-c01 {
+      10% {
+        transform: translate(0px, 0px);
+      }
+      40% {
+        transform: translate(-50px, -50px);
+      }
+    }
+    @keyframes symbol-animation-c02 {
+      10% {
+        transform: translate(0px, 0px);
+      }
+      40% {
+        transform: translate(50px, -50px);
+      }
+    }
+    @keyframes symbol-animation-c03 {
+      10% {
+        transform: translate(0px, 0px);
+      }
+      40% {
+        transform: translate(-50px, 50px);
+      }
+    }
+    @keyframes symbol-animation-c04 {
+      10% {
+        transform: translate(0px, 0px);
+      }
+      40% {
+        transform: translate(50px, 50px);
+      }
+    }
+  }
+  &.type-d {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 350px;
+    transform: translate(-50%, -50%);
+    animation: symbol-reverse-rotate 3s infinite;
+    opacity: 0;
+    .symbol-wrap { position: relative;
+      & > div { position: absolute; width: 150px; height: 150px; border-radius: 100%;}
+      .symbol-01 { top: -100px; left: -100px; background: #000; animation: symbol-animation-d01 5s infinite }
+      .symbol-02 { top: -100px; right: -100px; background: $secondary-color; animation: symbol-animation-d02 5s infinite }
+      .symbol-03 { top: 350px; left: -100px; background: $secondary-color; animation: symbol-animation-d03 5s infinite }
+      .symbol-04 { top: 350px; right: -100px; background: #fff; animation: symbol-animation-d04 5s infinite }
+    }
+    @keyframes symbol-reverse-rotate {
+      from {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 0.1;
+      }
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+        opacity: 0.1;
+      }
+    }
+    @keyframes symbol-animation-d01 {
+      10% {
+        transform: translate(0px, 0px);
+      }
+      40% {
+        transform: translate(-50px, -50px);
+      }
+    }
+    @keyframes symbol-animation-d02 {
+      10% {
+        transform: translate(0px, 0px);
+      }
+      40% {
+        transform: translate(50px, -50px);
+      }
+    }
+    @keyframes symbol-animation-d03 {
+      10% {
+        transform: translate(0px, 0px);
+      }
+      40% {
+        transform: translate(-50px, 50px);
+      }
+    }
+    @keyframes symbol-animation-d04 {
+      10% {
+        transform: translate(0px, 0px);
+      }
+      40% {
+        transform: translate(50px, 50px);
+      }
+    }
+  }
+  &.type-e { position: absolute; bottom: 0px; left: 150px; width: 340px; height: 100px;
+    .symbol-wrap { position: relative;
+      & > div { position: absolute; width: 100px; height: 100px; border-radius: 100%;}
+      .symbol-01 { top: 0px; left: 0px; background: #000; animation: symbol-animation-e01 2.5s infinite }
+      .symbol-02 { top: 0px; left: 120px; background: #FF8080; animation: symbol-animation-e02 2.5s infinite }
+      .symbol-03 { top: 0px; left: 240px; background: #000; animation: symbol-animation-e03 2.5s infinite }
+    }
+    @keyframes symbol-animation-e01 {
+      25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px) }
+      50% {-webkit-transform: translate(120px,0px);transform: translate(120px,0px)}
+      75% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+    }
+    @keyframes symbol-animation-e02 {
+      25% {-webkit-transform: translate(0px,-120px);transform: translate(0px,-120px)}
+      75% {-webkit-transform: translate(0px,-120px);transform: translate(0px,-120px)}
+    }
+    @keyframes symbol-animation-e03 {
+      25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+      50% {-webkit-transform: translate(-120px,0px);transform: translate(-120px,0px)}
+      75% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
+    }
+  }
+  &.type-f { position: absolute; width: 280px; height: 100px; top: 200px; right: 20px;
+    .symbol-wrap { position: relative;
+      & > div { position: absolute; width: 100px; height: 100px; border-radius: 100%; }
+      .symbol-01 { top: -50px; left: 180px; background: #000; z-index: 2; animation: symbol-animation-f01 2s infinite }
+      .symbol-02 { top: 0px; left: 120px; background: #FF8080; z-index: 1; }
+      .symbol-03 { top: 50px; left: 60px; background: #000; z-index: 0; animation: symbol-animation-f02 2s infinite }
+    }
+    @keyframes symbol-animation-f01 {
+      20% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px) }
+      40% {-webkit-transform: translate(-60px,50px);transform: translate(-60px,50px)}
+      60% {-webkit-transform: translate(-120px,0px);transform: translate(-120px,0px)}
+      80% {-webkit-transform: translate(-60px,50px);transform: translate(-60px,50px)}
+    }
+    @keyframes symbol-animation-f02 {
+      20% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px) }
+      40% {-webkit-transform: translate(60px,-50px);transform: translate(60px,-50px)}
+      60% {-webkit-transform: translate(120px,0px);transform: translate(120px,0px)}
+      80% {-webkit-transform: translate(60px,-50px);transform: translate(60px,-50px)}
+    }
+  }
+}
+// 경험페이지 도트 회선 끝
+// 연락페이지 텍스트 효과 시작
+@keyframes textEffect {
+  0% {
+      font-size: 500px;
+      color: #3eb5b5;
+      transform: translate(0px, -300px);
+      opacity: 0;
+  }
+  50% {
+    color: #5579ca;
+  }
+  100% {
+      font-size: 200px;
+      transform: translate(0px, 0px);
+      opacity: 1;
+  }
+}
+// 연락페이지 텍스트 효과 끝
+//// -----  animation 끝

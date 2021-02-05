@@ -1,8 +1,10 @@
 @charset 'UTF-8';
 
-@import 'asset.scss';
-@import 'header.scss';
-@import 'reset.scss';
-@import 'common.scss';
-@import 'style.scss';
-@import 'responsive.scss';
+// base
+@import 'base/style.scss';
+@import 'base/base.scss';
+@import 'base/typo.scss';
+
+// layout
+@import 'layout/layout.scss';
+@import 'layout/responsive.scss';

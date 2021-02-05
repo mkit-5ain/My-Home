@@ -1,0 +1,54 @@
+@charset 'utf-8';
+
+@font-face {
+  font-family: 'apple-light';
+  font-weight: '300';
+  // local 안쓰면 폰트 유무 관계없이 무조건 다운 받아짐 그래서 써야 있을시 다운 안받음
+  src:  local('apple'),
+        // url('../fonts/AppleSDGothicNeoL.woff2') format('woff2'),
+        url('../fonts/AppleSDGothicNeoL.eot') format('embedded-opentype'),
+        url('../fonts/AppleSDGothicNeoL.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'apple-medium';
+  font-weight: '400';
+  src:  local('apple'),
+        // url('../fonts/AppleSDGothicNeoM.woff2') format('woff2'),
+        url('../fonts/AppleSDGothicNeoM.eot') format('embedded-opentype'),
+        url('../fonts/AppleSDGothicNeoM.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'apple-bold';
+  font-weight: '700';
+  src:  local('apple'),
+        // url('../fonts/AppleSDGothicNeoB.woff2') format('woff2'),
+        url('../fonts/AppleSDGothicNeoB.eot') format('embedded-opentype'),
+        url('../fonts/AppleSDGothicNeoB.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'apple-ebold';
+  font-weight: '700';
+  src:  local('apple'),
+        // url('../fonts/AppleSDGothicNeoEB.woff2') format('woff2'),
+        url('../fonts/AppleSDGothicNeoEB.eot') format('embedded-opentype'),
+        url('../fonts/AppleSDGothicNeoEB.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'apple-heavy';
+  font-weight: '900';
+  src:  local('apple'),
+        // url('../fonts/AppleSDGothicNeoH.woff2') format('woff2'),
+        url('../fonts/AppleSDGothicNeoH.eot') format('embedded-opentype'),
+        url('../fonts/AppleSDGothicNeoH.ttf') format('TrueType');
+}
+@font-face {
+  font-family: 'sarabun';
+  src:  local('sarabun'),
+        url('../fonts/Sarabun-ExtraBold.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'sarabun-regular';
+  src:  local('sarabun'),
+        url('../fonts/Sarabun-regular.ttf') format('TrueType');
+}
