@@ -109,20 +109,20 @@
         .symbol-03 { top: 60px; left: 60px; }
       }
     }
-    &.type-e { position: fixed; bottom: 60px; left: 10px; width: auto; height: auto;
+    &.type-e { bottom: 30%; left: 20px; width: auto; height: auto;
       .symbol-wrap {
-        & > div { position: absolute; width: 15px; height: 15px; border-radius: 100%; }
+        & > div { position: absolute; width: 50px; height: 50px; border-radius: 100%; }
         .symbol-01 { top: 0px; left: 0px; opacity: 0.5; }
-        .symbol-02 { top: 20px; left: 0px; }
-        .symbol-03 { top: 40px; left: 0px; opacity: 0.5; }
+        .symbol-02 { top: 70px; left: 0px; }
+        .symbol-03 { top: 140px; left: 0px; opacity: 0.5; }
       }
     }
-    &.type-f { position: fixed; top: 100px; right: 10vw; width: auto; height: auto;
+    &.type-f { top: 150px; right: 10%; width: auto; height: auto; z-index: -1;
       .symbol-wrap {
-        & > div { position: absolute; width: 15px; height: 15px; border-radius: 100%; }
-        .symbol-01 { top: 13px; left: 7px; z-index: 2; animation: symbol-animation-f01 3s infinite; }
-        .symbol-02 { top: 20px; left: 0px; z-index: 1; }
-        .symbol-03 { top: 27px; left: -7px; z-index: 0; animation: symbol-animation-f02 3s infinite; }
+        & > div { position: absolute; width: 50px; height: 50px; border-radius: 100%; }
+        .symbol-01 { top: -30px; left: 30px; z-index: 2; animation: symbol-animation-f01 3s infinite; }
+        .symbol-02 { top: 0px; left: 0px; z-index: 1; }
+        .symbol-03 { top: 30px; left: -30px; z-index: 0; animation: symbol-animation-f02 3s infinite; }
       }
     }
   }
@@ -156,29 +156,29 @@
   }
   @keyframes symbol-animation-e01 {
     25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px) }
-    50% {-webkit-transform: translate(0px,20px);transform: translate(0px,20px)}
+    50% {-webkit-transform: translate(0px,70px);transform: translate(0px,70px)}
     75% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
   }
   @keyframes symbol-animation-e02 {
     25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
-    50% {-webkit-transform: translate(20px,0px);transform: translate(20px,0px)}
+    50% {-webkit-transform: translate(70px,0px);transform: translate(70px,0px)}
   }
   @keyframes symbol-animation-e03 {
     25% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
-    50% {-webkit-transform: translate(0px,-20px);transform: translate(0px,-20px)}
+    50% {-webkit-transform: translate(0px,-70px);transform: translate(0px,-70px)}
     75% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)}
   }
   @keyframes symbol-animation-f01 {
     20% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px) }
-    40% {-webkit-transform: translate(-7px,7px);transform: translate(-7px,7px)}
-    60% {-webkit-transform: translate(-12px,0px);transform: translate(-12px,0px)}
-    80% {-webkit-transform: translate(-7px,7px);transform: translate(-7px,7px)}
+    40% {-webkit-transform: translate(-30px,30px);transform: translate(-30px,30px)}
+    60% {-webkit-transform: translate(-60px,0px);transform: translate(-60px,0px)}
+    80% {-webkit-transform: translate(-30px,30px);transform: translate(-30px,30px)}
   }
   @keyframes symbol-animation-f02 {
     20% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px) }
-    40% {-webkit-transform: translate(7px,-7px);transform: translate(7px,-7px)}
-    60% {-webkit-transform: translate(12px,0px);transform: translate(12px,0px)}
-    80% {-webkit-transform: translate(7px,-7px);transform: translate(7px,-7px)}
+    40% {-webkit-transform: translate(30px,-30px);transform: translate(30px,-30px)}
+    60% {-webkit-transform: translate(60px,0px);transform: translate(60px,0px)}
+    80% {-webkit-transform: translate(30px,-30px);transform: translate(30px,-30px)}
   }
   /*// ---------------- style ----------------*/
 }
@@ -389,17 +389,17 @@
         .symbol-03 { top: 60px; left: 60px; }
       }
     }
-    &.type-e { position: fixed; bottom: 150px; left: 10px; width: auto; height: auto;
+    &.type-e { bottom: 60px; left: 10px; width: auto; height: auto;
       .symbol-wrap {
-        & > div { position: absolute; width: 50px; height: 50px; border-radius: 100%; }
+        & > div { position: absolute; width: 15px; height: 15px; border-radius: 100%; }
         .symbol-01 { top: 0px; left: 0px; opacity: 0.5; }
         .symbol-02 { top: 20px; left: 0px; }
         .symbol-03 { top: 40px; left: 0px; opacity: 0.5; }
       }
     }
-    &.type-f { position: fixed; top: 100px; right: 25vw; width: auto; height: auto; z-index: -1;
+    &.type-f { top: 100px; right: 10vw; width: auto; height: auto;
       .symbol-wrap {
-        & > div { position: absolute; width: 50px; height: 50px; border-radius: 100%; }
+        & > div { position: absolute; width: 25px; height: 25px; border-radius: 100%; }
         .symbol-01 { top: 13px; left: 7px; z-index: 2; animation: symbol-animation-f01 3s infinite; }
         .symbol-02 { top: 20px; left: 0px; z-index: 1; }
         .symbol-03 { top: 27px; left: -7px; z-index: 0; animation: symbol-animation-f02 3s infinite; }
