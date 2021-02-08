@@ -365,23 +365,20 @@ main { width: 100%; height: 100%; }
   .background-animate { background: #999;}
   position: relative;
   padding: 200px 0px;
-  .text-wrap { font-size: 200px; text-align: center;
+  .text-wrap { font-size: 200px; text-align: center; color: #999; font-weight: bold; text-shadow: -5px -4px 8px #afacac, 4px 6px 6px #7b7676;
     .text {
       padding: 100px 0px;
+      font-family: 'apple-light';
       &:nth-child(1) {
-        font-family: 'apple-light';
         animation: textEffect 1s cubic-bezier(.445,.05,.55,.95);
       }
       &:nth-child(2) {
-        font-family: 'apple-medium';
         animation: textEffect 1.25s cubic-bezier(.445,.05,.55,.95);
       }
       &:nth-child(3) {
-        font-family: 'apple-bold';
         animation: textEffect 1.5s cubic-bezier(.445,.05,.55,.95);
       }
       &:nth-child(4) {
-        font-family: 'apple-heavy';
         animation: textEffect 1.75s cubic-bezier(.445,.05,.55,.95);
       }
     }
@@ -391,6 +388,8 @@ main { width: 100%; height: 100%; }
       padding: 100px 0px;
       font-size: 200px;
       font-family: 'sarabun-regular';
+      color: #999;
+      text-shadow: -5px -4px 8px #afacac, 4px 6px 6px #7b7676;
       text-align: center;
       transform: translate(0px, -50%);
       opacity: 0;
@@ -409,15 +408,22 @@ main { width: 100%; height: 100%; }
           background: linear-gradient(45deg, red, transparent);
         }
       }
-      .initial-ass { font-size: 20px; font-family: 'apple-medium'; }
+      .initial-ass { font-size: 20px; font-family: 'apple-medium'; color: #fff; }
     }
   }
   .personal-info {
+    padding-top: 200px;
     color: #999;
-    font-size: 200px;
+    font-size: 130px;
     font-weight: bold;
+    text-align: center;
     text-shadow: -5px -4px 8px #afacac, 4px 6px 6px #7b7676;
     a { color: inherit; }
+    &.active {
+      transform: translate(0px, 0px);
+      animation: fade-contents 1.75s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      opacity: 1;
+    }
   }
 }
 
