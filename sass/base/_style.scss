@@ -50,7 +50,7 @@ $default-color: #2b323f;
   display: inline-block;
   white-space: nowrap;
   animation-duration: 12s;
-  animation-delay: 0.5s;
+  animation-delay: 1s;
   -webkit-animation-name: marqueeLeft;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -62,7 +62,7 @@ $default-color: #2b323f;
   padding-left: 120%;
   display: inline-block;
   white-space: nowrap;
-  animation-duration: 14s;
+  animation-duration: 13s;
   animation-delay: 1.5s;
   -webkit-animation-name: marqueeLeft;
   -webkit-animation-timing-function: linear;
@@ -96,6 +96,18 @@ $default-color: #2b323f;
 		opacity: 1;
 		transform: translate(-80px, 0px);
 	}
+}
+@media screen and ( max-width: 750px ) {
+  @keyframes introTextAnimation {
+  	from {
+  		opacity: 0;
+  		transform: translate(-500px, -50px);
+  	}
+  	to {
+  		opacity: 1;
+  		transform: translate(-5vw, 0px);
+  	}
+  }
 }
 // 메인 텍스트 dot
 @keyframes dotAnimation {
