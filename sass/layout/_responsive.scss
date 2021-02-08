@@ -85,7 +85,10 @@
       &.active {
         .circle { width: 75px; height: 75px;
           @for $i from 1 through 5 {
-            &:nth-child(#{$i}) { transform: translate(0px, 50px * $i); opacity: 0.15 * $i; }
+            &:nth-child(#{$i}) {
+              transform: translate(0px, 50px * $i);
+              opacity: 0.15 * $i;
+            }
           }
         }
       }
@@ -396,7 +399,7 @@
     }
     &.type-f { top: 100px; right: 10vw; width: auto; height: auto;
       .symbol-wrap {
-        & > div { position: absolute; width: 25px; height: 25px; border-radius: 100%;}
+        & > div { position: absolute; width: 25px; height: 25px; border-radius: 100%; }
         .symbol-01 { top: 13px; left: 7px; z-index: 2; animation: symbol-animation-f01 3s infinite; }
         .symbol-02 { top: 20px; left: 0px; z-index: 1; }
         .symbol-03 { top: 27px; left: -7px; z-index: 0; animation: symbol-animation-f02 3s infinite; }
