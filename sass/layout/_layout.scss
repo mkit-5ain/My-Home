@@ -450,8 +450,13 @@ main { width: 100%; height: 100%; }
         }
       }
     }
-    .discription { display: flex; padding: 50px 0px; font-size: 30px; align-items: center; flex-direction: column;
+    .discription { display: flex; padding: 50px 0px 150px 0px; font-size: 30px; align-items: center; flex-direction: column;
       .interval { padding-top: 20px; }
+      .work-info { padding-top: 50px; font-size: 20px;
+        p { line-height: 30px;}
+        .spec { color: #f00; }
+        .spec-list { padding-top: 15px; padding-left: 10px; color: #f00;}
+      }
       .btn-site-more { margin-top: 20px; font-size: 20px; text-decoration: underline; }
     }
     .skill { display: flex; padding-top: 40px; font-size: 20px; justify-content: space-evenly;
