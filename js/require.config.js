@@ -6,16 +6,10 @@ var module = {
     paths: {
         // major library
         'jquery': 'lib/jquery.ui.min',
-        'jquery-ui':'lib/jquery.ui',
         //es5 File
         //'es5': 'lib/es5-sham',
         //babel
         'babel': 'lib/babel',
-        //slider
-        'bxSlider':'lib/bxSlider',
-        //quickScroller
-        'quickScroller':'lib/quickScroller',
-        'iePlaceholder':'lib/placeholder',
         //ajax
         'ajax':'functions/ajaxFrame',
         'uiAction':'functions/uiFrame',
@@ -32,17 +26,11 @@ var module = {
         'bxSlider':{
               deps: ['jquery']
         },
-        'quickScroller':{
-              deps: ['jquery']
-        },
         'ajax':{
             deps:['jquery']
         },
-        'jquery-ui': {
-            deps:['jquery']
-        },
         'uiAction':{
-            deps:['jquery','jquery-ui','ajax','bxSlider','quickScroller']
+            deps:['jquery','ajax']
         },
         //pages
         'layout': {

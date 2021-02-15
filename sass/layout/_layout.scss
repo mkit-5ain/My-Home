@@ -74,71 +74,71 @@
 	      }
 	    }
 	  }
-	  .menu-theme { position: absolute; display: flex; bottom: 25px; right: 25px; padding: 15px; cursor: pointer;
-	    &:hover {
-	      .theme-list-icon {
-	        .theme-dark {
-	          &::after { transform: translate3d(0px, 0px, 5px); }
-	        }
-	      }
-	    }
-	    .theme-list { height: 18px; margin: 6px 10px; font-size: 16px; font-weight: bold; letter-spacing: 0px; overflow: hidden;
-	      &.theme-dark {
-	        .theme-type { transform: translateY(0%); }
-	      }
-	      .theme-type { display: inline-flex; height: 21px; padding-right: 2px; flex-direction: column; transform: translateY(-100%); transition: 0.3s ease-in-out; }
-	    }
-	    .theme-list-icon { position: relative; margin: 0px 10px;
-	      .theme-dark {
-	        background: #fff;
-	        position: absolute;
-	        top: 3px;
-	        left: 3px;
-	        z-index: 11;
-	        width: 24px;
-	        height: 24px;
-	        border-radius: 20px;
-	        overflow: hidden;
-	        &::after {
-	          content: '';
-	          display: block;
-	          width: 18px;
-	          height: 18px;
-	          background: #000;
-	          border-radius: 100%;
-	          transition: 0.1s cubic-bezier(0.7, 0.12, 0.34, 0.94);
-	          transform: translate3d(7px, 0px, 5px);
-	        }
-	      }
-	      .theme-light { width: 30px; height: 30px;
-	        &::before {
-	          content: '';
-	          position: absolute;
-	          display: block;
-	          top: 0px;
-	          left: 0px;
-	          width: 30px;
-	          height: 30px;
-	          border-radius: 100%;
-	          background: #000;
-	          transition: 0.2s ease-in-out;
-	        }
-	        &::after {
-	          content: '';
-	          position: absolute;
-	          display: block;
-	          top: 0px;
-	          left: 0px;
-	          width: 30px;
-	          height: 30px;
-	          border-radius: 100%;
-	          background: #000;
-	          transform: rotate(45deg);
-	          transition: 0.2s ease-in-out;
-	        }
-	      }
-	    }
-	  }
+	  // .menu-theme { position: absolute; display: flex; bottom: 25px; right: 25px; padding: 15px; cursor: pointer;
+	  //   &:hover {
+	  //     .theme-list-icon {
+	  //       .theme-dark {
+	  //         &::after { transform: translate3d(0px, 0px, 5px); }
+	  //       }
+	  //     }
+	  //   }
+	  //   .theme-list { height: 18px; margin: 6px 10px; font-size: 16px; font-weight: bold; letter-spacing: 0px; overflow: hidden;
+	  //     &.theme-dark {
+	  //       .theme-type { transform: translateY(0%); }
+	  //     }
+	  //     .theme-type { display: inline-flex; height: 21px; padding-right: 2px; flex-direction: column; transform: translateY(-100%); transition: 0.3s ease-in-out; }
+	  //   }
+	  //   .theme-list-icon { position: relative; margin: 0px 10px;
+	  //     .theme-dark {
+	  //       background: #fff;
+	  //       position: absolute;
+	  //       top: 3px;
+	  //       left: 3px;
+	  //       z-index: 11;
+	  //       width: 24px;
+	  //       height: 24px;
+	  //       border-radius: 20px;
+	  //       overflow: hidden;
+	  //       &::after {
+	  //         content: '';
+	  //         display: block;
+	  //         width: 18px;
+	  //         height: 18px;
+	  //         background: #000;
+	  //         border-radius: 100%;
+	  //         transition: 0.1s cubic-bezier(0.7, 0.12, 0.34, 0.94);
+	  //         transform: translate3d(7px, 0px, 5px);
+	  //       }
+	  //     }
+	  //     .theme-light { width: 30px; height: 30px;
+	  //       &::before {
+	  //         content: '';
+	  //         position: absolute;
+	  //         display: block;
+	  //         top: 0px;
+	  //         left: 0px;
+	  //         width: 30px;
+	  //         height: 30px;
+	  //         border-radius: 100%;
+	  //         background: #000;
+	  //         transition: 0.2s ease-in-out;
+	  //       }
+	  //       &::after {
+	  //         content: '';
+	  //         position: absolute;
+	  //         display: block;
+	  //         top: 0px;
+	  //         left: 0px;
+	  //         width: 30px;
+	  //         height: 30px;
+	  //         border-radius: 100%;
+	  //         background: #000;
+	  //         transform: rotate(45deg);
+	  //         transition: 0.2s ease-in-out;
+	  //       }
+	  //     }
+	  //   }
+	  // }
 	}
 }
 // 헤더 끝

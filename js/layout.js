@@ -11,10 +11,8 @@ controlFunctions();
 //Layout Html CallBack Functions
 function headerFunctions() {
 	menuAction();
-	themeAction();
 }
 function footerFunctions() {
-	bxSliders('.slider-widget .footer-bx-slider', 112, 40, 7, 'controls', true, true);
 }
 function quickFunctions() {
 	scrollMove('#quick', 200, 0);
@@ -22,8 +20,4 @@ function quickFunctions() {
 
 //form element controller
 function controlFunctions() {
-	selectCus();
-	//크로스브라우징용
-	iePlaceHolder();
-	ieMaxLength();
 }
