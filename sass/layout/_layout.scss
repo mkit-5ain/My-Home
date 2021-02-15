@@ -7,12 +7,12 @@
     li { transform: rotate(360deg); animation: textRotate 5s 1s infinite; animation-fill-mode: forwards; }
   }
 	.menu-btn { position: relative; z-index: 11; width: 40px; height: 40px; border: 2px solid #000; background: transparent; cursor: pointer; transition: 0.1s ease-in-out;
-	  &:hover {
-	    div {
-	      &:nth-child(1) { top: 18px; }
-	      &:nth-child(2) { top: 18px; }
-	    }
-	  }
+	  // &:hover {
+	  //   div {
+	  //     &:nth-child(1) { top: 18px; }
+	  //     &:nth-child(2) { top: 18px; }
+	  //   }
+	  // }
 	  &.active {
 	    div { transition: 0.1s ease-in-out;
 	      &:nth-child(1) { top: 17px; transform: rotate(45deg); }
@@ -296,37 +296,6 @@ main { width: 100%; height: 100%; }
 	  }
 	}
 	// 메인 컨텐츠 끝
-	// 페이지 이동 버튼 시작
-	.experience-btn { position: relative;
-	  &.fade-contents { transform: translate(0px, 50px);
-	    &.active { animation: fade-contents 2s forwards; }
-	  }
-	  .experience-more {
-	    position: relative;
-	    display: block;
-	    width: 400px;
-	    margin: 200px auto 200px auto;
-	    padding: 20px 0px;
-	    font-size: 22px;
-	    text-align: center;
-	    border-radius: 50px;
-	    box-shadow: 20px 20px 40px #d9d9d9, -20px -20px 40px #fff;
-	    &::after { content: ''; position: absolute; top: 40px; right: 20px; width: 46px; height: 12px; background: url('../image/main/icon-arrow-right.png') 0px 0px no-repeat;}
-	    span { position: relative; color: $secondary-color;
-	      &::after {
-	        content: '';
-	        position: absolute;
-	        top: 12px;
-	        left: 5px;
-	        width: 60px;
-	        height: 12px;
-	        background: $secondary-color;
-	        opacity: 0.2;
-	      }
-	    }
-	  }
-	}
-	// 페이지 이동 버튼 끝
 }
 // 메인 끝
 // 경험 페이지

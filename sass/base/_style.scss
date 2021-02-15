@@ -42,6 +42,37 @@ $default-color: #2b323f;
     transition: 0.5s ease-in-out;
   }
 }
+// 페이지 이동 버튼 시작
+#experience-btn { position: relative;
+  &.fade-contents { transform: translate(0px, 50px);
+    &.active { animation: fade-contents 2s forwards; }
+  }
+  .experience-more {
+    position: relative;
+    display: block;
+    width: 400px;
+    margin: 200px auto 200px auto;
+    padding: 20px 0px;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 20px 20px 40px #d9d9d9, -20px -20px 40px #fff;
+    &::after { content: ''; position: absolute; top: 28px; right: 20px; width: 46px; height: 12px; background: url('../image/main/icon-arrow-right.png') 0px 0px no-repeat;}
+    span { position: relative; margin-right: 10px; color: $secondary-color;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 5px;
+        width: 100%;
+        height: 12px;
+        background: $secondary-color;
+        opacity: 0.2;
+      }
+    }
+  }
+}
+// 페이지 이동 버튼 끝
 // 메인 텍스트 마퀴 시작
 .marquee-left {
   width: 100%;
