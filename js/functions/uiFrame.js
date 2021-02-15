@@ -17,3 +17,10 @@ function menuAction () {
     $('.menu-view, .menu-btn, body').toggleClass('active');
   });
 }
+
+
+// function viewAction () {
+//   window.onload = function() {
+//     $('main').addClass('view');
+//   }
+// }

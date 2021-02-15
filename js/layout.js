@@ -6,7 +6,8 @@ ajaxHtmlCall('#experience-btn','GET','../layout/exp-btn.html','html', true);
 // 퀵매뉴 호출
 // ajaxHtmlCall('#quick','GET','../layout/quick.html','html', true, quickFunctions);
 
-$('#container').show();
+$('main').show();
+
 controlFunctions();
 
 
