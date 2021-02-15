@@ -21,6 +21,17 @@ function layout () {
   $(document).ready(function () {
     $.ajax({
       type: 'get' ,
+      url: 'layout/exp-btn.html' ,
+      dataType : 'html' ,
+      success: function(data) {
+        $("#experience-btn").html(data);
+      }
+    });
+  });
+
+  $(document).ready(function () {
+    $.ajax({
+      type: 'get' ,
       url: 'layout/index.html' ,
       dataType : 'html' ,
       success: function(data) {
