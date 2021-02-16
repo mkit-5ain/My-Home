@@ -56,23 +56,19 @@
         .initial {
           &::before { bottom: 4vw; }
         }
-        .initial-ass { display: block; font-size: 5vw; }
+        .initial-ass { display: block; }
       }
     }
     .personal-info {
-      > p { font-size: 55px; text-shadow: -2px -2px 2px #afacac, 3px 1px 3px #7b7676; letter-spacing: 2px; }
+      > p { font-size: 55px; text-shadow: -2px -2px 2px #ffffff, 3px 1px 3px #a3b1c8; letter-spacing: 2px; }
       &.active { animation: fade-contents 2s forwards; }
     }
   }
   @keyframes textEffect {
     0% {
         font-size: 20vw;
-        color: #3eb5b5;
         transform: translate(0px, -10vw);
         opacity: 0;
-    }
-    50% {
-      color: #5579ca;
     }
     100% {
         font-size: 15vw;
@@ -315,10 +311,10 @@
         .initial {
           &::before { bottom: 4vw; }
         }
-        .initial-ass { display: block; font-size: 5vw; }
+        .initial-ass { display: block; padding-top: 10px; font-size: 20px;}
       }
     }
-    .personal-info { font-size: 35px; text-shadow: -2px -2px 2px #afacac, 2px 1px 3px #7b7676;
+    .personal-info { font-size: 35px; text-shadow: -2px -2px 2px #ffffff, 2px 1px 3px #a3b1c8;
       &.active { animation: fade-contents 2s forwards; }
     }
   }
@@ -330,12 +326,8 @@
   @keyframes textEffect {
     0% {
         font-size: 30vw;
-        color: #3eb5b5;
         transform: translate(0px, -10vw);
         opacity: 0;
-    }
-    50% {
-      color: #5579ca;
     }
     100% {
         font-size: 25vw;

@@ -437,12 +437,12 @@ $default-color: #2b323f;
 @keyframes textEffect {
   0% {
       font-size: 500px;
-      color: #888888;
+      color: #fff;
       transform: translate(0px, -300px);
       opacity: 0;
   }
   50% {
-    color: #C5C5C5;
+    color: #e0e5ec;
   }
   100% {
       font-size: 200px;
@@ -452,3 +452,46 @@ $default-color: #2b323f;
 }
 // 연락페이지 텍스트 효과 끝
 //// -----  animation 끝
+// 경험페이지 3d 텍스트
+.text-3d {
+  position: fixed;
+	top: 50%;
+	left: 50%;
+  z-index: -1;
+	margin: 0;
+  font-size: 15vw;
+  font-weight: 900;
+  color: rgba(#4fbc9d, 0.5);
+  text-transform: uppercase;
+	text-rendering: optimizeLegibility;
+  transform: translate(-50%, -50%) skew(10deg) rotate(-10deg);
+	text-shadow: 1px 4px 6px #e6e2df, 0 0 0 #66303a, 1px 4px 6px #e6e2df;
+	white-space: nowrap;
+	&:before {
+		content: attr(data-heading);
+		position: absolute;
+		left: -0.3%;
+		top: -5%;
+    z-index: 2;
+		width: 100%;
+		height: 50%;
+		color: #fbf7f4;
+    overflow: hidden;
+		transform: translate(1.6vw, 0) skew(-13deg) scale(1, 1.2);
+		text-shadow: 2px -1px 6px rgba(0,0,0,0.2);
+	}
+	&:after {
+		content: attr(data-heading);
+		position: absolute;
+		left: 0;
+    z-index: 1;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		color: #d3cfcc;
+    overflow: hidden;
+		transform: translate(0, 0) skew(13deg) scale(1, 0.8);
+		clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+		text-shadow: 2px -1px 6px rgba(0,0,0,0.3);
+	}
+}
